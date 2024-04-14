@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="e6dedaaa-99cb-4cc0-ba57-69455a74c9aa" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="cicidetestFlow" doc:id="77f70322-19b1-4c69-8b11-71760e2eb034" >
+		<http:listener doc:name="Listener" doc:id="a9cd7478-7285-45ba-ac27-dcbd46d2a448" config-ref="HTTP_Listener_config" path="/cicdcheck"/>
+		<logger level="INFO" doc:name="StartLogger" doc:id="91ea87b7-fa66-486a-9a6d-0f74ac4a7171" message='#["Start of flow " ++(flow.name as String)]'/>
+		<set-payload value='#[" CI/CD test imeplementation "]' doc:name="Set Payload" doc:id="170c4a1e-407f-4ae4-9ba3-9820691d9d00" />
+		<logger level="INFO" doc:name="payload" doc:id="8e64ed20-c13e-4016-a51c-d190558b946a" message="#[payload]"/>
+		<logger level="INFO" doc:name="EndLogger" doc:id="40e7e220-9274-4b32-aa92-704e6138c82c" message='"End of flow " ++(flow.name as String)'/>
+	</flow>
+</mule>
