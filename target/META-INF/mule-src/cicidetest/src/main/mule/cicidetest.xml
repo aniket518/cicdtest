@@ -12,6 +12,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 		<logger level="INFO" doc:name="StartLogger" doc:id="91ea87b7-fa66-486a-9a6d-0f74ac4a7171" message='#["Start of flow " ++(flow.name as String)]'/>
 		<set-payload value='#[" CI/CD test imeplementation "]' doc:name="Set Payload" doc:id="170c4a1e-407f-4ae4-9ba3-9820691d9d00" />
 		<logger level="INFO" doc:name="payload" doc:id="8e64ed20-c13e-4016-a51c-d190558b946a" message="#[payload]"/>
-		<logger level="INFO" doc:name="EndLogger" doc:id="40e7e220-9274-4b32-aa92-704e6138c82c" message='"End of flow " ++(flow.name as String)'/>
+		<logger level="INFO" doc:name="Logger" doc:id="146eb8eb-d510-4163-832e-1320b38c084d" message='#["second last logger"]'/>
+		<logger level="INFO" doc:name="EndLogger" doc:id="40e7e220-9274-4b32-aa92-704e6138c82c" message='#["End of flow " ++(flow.name as String)]'/>
 	</flow>
 </mule>

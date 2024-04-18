@@ -32,7 +32,7 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>4.4.0</muleVersion>
+						<muleVersion>4.5.0</muleVersion>
 						<username>aniketpal</username>
 						<password>Anikettgh013</password>
 						<applicationName>cicdcheck</applicationName>
@@ -43,7 +43,7 @@
 							<key>value</key>
 						</properties>
 					</cloudHubDeployment>
-				</configuration>   
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -59,7 +59,7 @@
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.3</version>
 			<classifier>mule-plugin</classifier>
-		</dependency> 
+		</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
